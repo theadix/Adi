@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBoost Pro - Instant Social Media Pricing Calculator</title>
+    <meta name="description" content="Calculate prices instantly for Instagram, YouTube, Facebook services. Transparent pricing, fast delivery within 1 hour.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1 class="brand-text">SocialBoost Pro</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#calculator" class="nav-link">Pricing</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#trust" class="nav-link">Why Choose Us</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="https://wa.me/919122294466" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Pricing Focused -->
+    <section class="hero pricing-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Instant Social Media
+                    <span class="text-gradient">Price Calculator</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Calculate prices instantly. Transparent pricing with fast delivery within 1 hour.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">₹20</div>
+                        <div class="stat-label">Instagram Followers per 100</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1hr</div>
+                        <div class="stat-label">Delivery Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#calculator" class="btn btn-primary btn-large">
+                        <i class="fas fa-calculator"></i>
+                        Calculate Prices
+                    </a>
+                    <a href="https://wa.me/919122294466" class="btn btn-secondary btn-large">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Calculate Your Prices</h2>
+                <p class="section-subtitle">Enter quantities below to see instant pricing</p>
+            </div>
+            
+            <div class="calculator-grid">
+                <!-- Instagram Services -->
+                <div class="calculator-card">
+                    <div class="card-header">
+                        <i class="fab fa-instagram instagram"></i>
+                        <h3>Instagram Services</h3>
+                    </div>
+                    
+                    <div class="service-items">
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Followers</span>
+                                <span class="item-rate">₹20 per 100</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="instagram-followers" 
+                                       data-rate="20" 
+                                       data-unit="100"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">followers</span>
+                            </div>
+                            <div class="price-display" id="price-instagram-followers">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Likes</span>
+                                <span class="item-rate">₹10 per 100</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="instagram-likes" 
+                                       data-rate="10" 
+                                       data-unit="100"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">likes</span>
+                            </div>
+                            <div class="price-display" id="price-instagram-likes">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Reel Views</span>
+                                <span class="item-rate">₹10 per 1,000</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="instagram-views" 
+                                       data-rate="10" 
+                                       data-unit="1000"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">views</span>
+                            </div>
+                            <div class="price-display" id="price-instagram-views">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Story Views</span>
+                                <span class="item-rate">₹5 per 100</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="instagram-story-views" 
+                                       data-rate="5" 
+                                       data-unit="100"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">views</span>
+                            </div>
+                            <div class="price-display" id="price-instagram-story-views">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Comments</span>
+                                <span class="item-rate">₹10 per 10</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="instagram-comments" 
+                                       data-rate="10" 
+                                       data-unit="10"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">comments</span>
+                            </div>
+                            <div class="price-display" id="price-instagram-comments">₹0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTube Services -->
+                <div class="calculator-card">
+                    <div class="card-header">
+                        <i class="fab fa-youtube youtube"></i>
+                        <h3>YouTube Services</h3>
+                    </div>
+                    
+                    <div class="service-items">
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Views</span>
+                                <span class="item-rate">₹200 per 1,000</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="youtube-views" 
+                                       data-rate="200" 
+                                       data-unit="1000"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">views</span>
+                            </div>
+                            <div class="price-display" id="price-youtube-views">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Subscribers</span>
+                                <span class="item-rate">₹400 per 100</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="youtube-subscribers" 
+                                       data-rate="400" 
+                                       data-unit="100"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">subscribers</span>
+                            </div>
+                            <div class="price-display" id="price-youtube-subscribers">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Comments</span>
+                                <span class="item-rate">₹150 per 100</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="youtube-comments" 
+                                       data-rate="150" 
+                                       data-unit="100"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">comments</span>
+                            </div>
+                            <div class="price-display" id="price-youtube-comments">₹0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facebook Services -->
+                <div class="calculator-card">
+                    <div class="card-header">
+                        <i class="fab fa-facebook facebook"></i>
+                        <h3>Facebook Services</h3>
+                    </div>
+                    
+                    <div class="service-items">
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Followers</span>
+                                <span class="item-rate">₹200 per 1,000</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="facebook-followers" 
+                                       data-rate="200" 
+                                       data-unit="1000"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">followers</span>
+                            </div>
+                            <div class="price-display" id="price-facebook-followers">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Page Likes</span>
+                                <span class="item-rate">₹300 per 1,000</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="facebook-likes" 
+                                       data-rate="300" 
+                                       data-unit="1000"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">likes</span>
+                            </div>
+                            <div class="price-display" id="price-facebook-likes">₹0</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="item-header">
+                                <span class="item-name">Post Engagement</span>
+                                <span class="item-rate">₹8 per 100</span>
+                            </div>
+                            <div class="item-input">
+                                <input type="number" 
+                                       class="quantity-input" 
+                                       data-service="facebook-engagement" 
+                                       data-rate="8" 
+                                       data-unit="100"
+                                       placeholder="0"
+                                       min="0">
+                                <span class="unit">engagements</span>
+                            </div>
+                            <div class="price-display" id="price-facebook-engagement">₹0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary" id="orderSummary">
+                <div class="summary-header">
+                    <h3>Order Summary</h3>
+                    <div class="total-price" id="totalPrice">₹0</div>
+                </div>
+                <div class="summary-items" id="summaryItems">
+                    <p class="no-items">No items selected</p>
+                </div>
+                <div class="order-actions">
+                    <button id="orderWhatsApp" class="btn btn-primary btn-large" disabled>
+                        <i class="fab fa-whatsapp"></i>
+                        Order via WhatsApp
+                    </button>
+                    <button id="orderTelegram" class="btn btn-secondary btn-large" disabled>
+                        <i class="fab fa-telegram"></i>
+                        Order via Telegram
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose SocialBoost Pro?</h2>
+                <p class="section-subtitle">Fast, reliable, and affordable social media growth services</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Instant Pricing</h3>
+                    <p>Calculate prices in real-time with our transparent pricing calculator</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Most orders start within 1 hour of confirmation</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe & Secure</h3>
+                    <p>100% safe methods that won't harm your account</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Get help anytime via WhatsApp or Telegram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section id="trust" class="trust">
+        <div class="container">
+            <div class="trust-content">
+                <div class="trust-header">
+                    <h2 class="trust-title">Trusted by Creators & Businesses</h2>
+                    <p class="trust-subtitle">Join thousands of satisfied customers who trust SocialBoost Pro for their social media growth</p>
+                </div>
+                
+                <div class="trust-metrics">
+                    <div class="metric-item">
+                        <div class="metric-number">50K+</div>
+                        <div class="metric-label">Orders Completed</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">98%</div>
+                        <div class="metric-label">Customer Satisfaction</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">1 Hour</div>
+                        <div class="metric-label">Average Delivery</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">24/7</div>
+                        <div class="metric-label">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about our services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the price calculator work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply enter the quantity you need in any service field, and our calculator will show you the exact price instantly. You can add multiple services and see a complete order summary before placing your order.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How fast is delivery?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most orders start processing within 1 hour of confirmation. Delivery time varies by service type and quantity, but we pride ourselves on being one of the fastest SMM providers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I place an order?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After calculating your prices, click "Order via WhatsApp" or "Order via Telegram". You'll be connected directly with our support team who will confirm your order details and provide payment instructions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is login/password required?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No login or password is required. Simply contact us via WhatsApp or Telegram to place your order. We use secure methods that don't require account access.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the prices fixed?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our prices are transparent and fixed. What you see in the calculator is what you pay. There are no hidden fees or surprise charges.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I contact support?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can contact us anytime via WhatsApp at +919122294466 or Telegram at @the_adix. We provide 24/7 support for all your questions and orders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Ready to Get Started?</h2>
+                <p class="contact-subtitle">
+                    Calculate your prices above, then contact us to place your order
+                </p>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/919122294466" class="btn btn-primary btn-large">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                    <a href="https://t.me/the_adix" class="btn btn-secondary btn-large">
+                        <i class="fab fa-telegram"></i>
+                        Chat on Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="brand-text">SocialBoost Pro</h3>
+                    <p>Professional social media marketing services with instant pricing and fast delivery.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#calculator">Instagram Services</a></li>
+                            <li><a href="#calculator">YouTube Services</a></li>
+                            <li><a href="#calculator">Facebook Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="https://wa.me/919122294466">Contact Support</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="https://wa.me/919122294466">WhatsApp: +919122294466</a></li>
+                            <li><a href="https://t.me/the_adix">Telegram: @the_adix</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SocialBoost Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
